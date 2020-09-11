@@ -2,7 +2,10 @@
     font-family: 'Raleway', sans-serif;
     --blue: #0065FC;
     --grey: #F2F2F2;
+    --lightblue: #DEEBFF;
 }
+
+/* tester var avec W3C */
 
 #container {
     width: 93%;
@@ -37,7 +40,7 @@
 #cards_container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #container3 {
@@ -46,6 +49,7 @@
     border-radius: 15px;
     padding: 1%;
 }
+
 .card1 {
     background-color: white;
     border-radius: 1.5em;
@@ -65,6 +69,26 @@
 
 .grey {
     color: var(--grey);
+}
+
+.lightblue {
+    color: var(--lightblue);
+}
+
+.card1_text {
+    margin-left: 5%;
+}
+
+.card1_text p{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.filter_switch {
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5em;
+    border: solid;
 }
 
 footer {
