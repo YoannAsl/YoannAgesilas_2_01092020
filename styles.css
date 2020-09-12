@@ -6,6 +6,9 @@
 }
 
 /* tester var avec W3C */
+body {
+    margin-top: 0px;
+}
 
 #container {
     width: 93%;
@@ -13,16 +16,78 @@
     margin-right: auto;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin-right: 2%;
+}
+
+nav a {
+    padding: 5%;
+}
+
+#nav_selected {
+    border-top: solid;
+}
+
+form {
+    display: flex;
+}
+
+#form_button {
+    background-color: var(--grey);
+    padding: 0;
+    border: none;
+    height: 36px;
+    width: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#form_input {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 32px;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--grey);
+    font-weight: bold;
+}
+
 #submit_button {
+    height: 36px;
     background-color: var(--blue);
     color: white;
     border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    width: 100px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#filters {
+    margin-top: 1.2%;
+    display: flex;
 }
 
 .titre {
     font-weight: bold;
+}
+
+.filter_switch {
+    margin-left: 25px;
+    padding-left: 0;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5em;
+    border: solid;
+    border-width: 2px;
+    border-color: #d9d9d9;
 }
 
 #container1 {
@@ -34,7 +99,7 @@
     width: 61%;
     background-color: var(--grey);
     border-radius: 15px;
-    padding: 2%;
+    padding: 1% 2%;
 }
 
 #cards_container {
@@ -59,6 +124,7 @@
 
 .card1_img {
     width: 100%;
+    height: 55%;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
 }
@@ -75,6 +141,19 @@
     color: var(--lightblue);
 }
 
+#test {
+    height: 75%;
+    overflow: hidden;
+}
+
+#test img{
+    margin: 0px -500px -10px 0px;
+}
+
+.price {
+    font-weight: bold;
+}
+
 .card1_text {
     margin-left: 5%;
 }
@@ -84,11 +163,8 @@
     margin-bottom: 2%;
 }
 
-.filter_switch {
-    font-weight: bold;
-    background-color: white;
-    border-radius: 5em;
-    border: solid;
+.fa-stack {
+    font-size: 1.5em;
 }
 
 footer {
