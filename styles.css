@@ -6,14 +6,15 @@
 }
 
 /* tester var avec W3C */
-body {
-    margin-top: 0px;
+body p {
+    margin: 0;
+    font-size: 110%;
 }
 
 #container {
+    /* padding: 0 3.4%; */
     width: 93%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 header {
@@ -99,34 +100,72 @@ form {
     width: 61%;
     background-color: var(--grey);
     border-radius: 15px;
-    padding: 1% 2%;
+    padding: 2% 2.5%;
 }
 
-#cards_container {
+#cards_container2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-#container3 {
-    width: 31%;
-    background-color: var(--grey);
-    border-radius: 15px;
-    padding: 1%;
-}
-
 .card1 {
     background-color: white;
-    border-radius: 1.5em;
-    padding: 0.6%;
-    width: 30%;
+    border-radius: 20px;
+    padding: 0.5% 0.5% 1.5% 0.5%;
+    width: 28%;
+    margin: 1.7% 0;
 }
 
 .card1_img {
     width: 100%;
-    height: 55%;
+    height: 140px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+}
+
+#container3 {
+    width: 29%;
+    background-color: var(--grey);
+    border-radius: 15px;
+    padding: 1% 0%;
+}
+
+#container3_title {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8%
+}
+
+#container3_title i {
+    margin: auto 0;
+}
+
+#cards_container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card2 {
+    background-color: white;
+    margin: 4% 8%;
+    padding: 0.5% 0.5% 1% 0.5%;
+    border-radius: 1.5em;
+    display: flex;
+}
+
+.card2_img {
+    height: 135px;
+    width: 37%;
     border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    object-fit: cover;
+}
+
+.card2_text {
+    padding: 1%;
 }
 
 .blue {
@@ -167,6 +206,40 @@ form {
     font-size: 1.5em;
 }
 
+#container5 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_full {
+    width: 22.5%;
+}
+
+.card_full img {
+    width: 100%;
+}
+
+.cards_container4 {
+    width: 22.5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards_container4 img{
+    width: 100%;
+}
+
 footer {
     background-color: var(--grey);
+    padding: 1% 2%;
+}
+
+#footer_container {
+    display: flex;
+    width: 97%;
+    margin: 0 auto;
+}
+
+#footer_container div {
+    width: 33%;
 }
