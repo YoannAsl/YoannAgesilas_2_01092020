@@ -5,14 +5,32 @@
     --lightblue: #DEEBFF;
 }
 
-/* tester var avec W3C */
-body p {
+.test {
+    text-decoration: none;
+
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.grey {
+    color: var(--grey);
+}
+
+.lightblue {
+    color: var(--lightblue);
+}
+
+body {
     margin: 0;
+}
+
+body p {
     font-size: 110%;
 }
 
 #container {
-    /* padding: 0 3.4%; */
     width: 93%;
     margin: 0 auto;
 }
@@ -31,6 +49,7 @@ nav {
 
 nav a {
     padding: 5%;
+    text-decoration: none;
 }
 
 #nav_selected {
@@ -81,6 +100,7 @@ form {
 }
 
 .filter_switch {
+    font-size: 100%;
     margin-left: 25px;
     padding-left: 0;
     font-weight: bold;
@@ -89,6 +109,18 @@ form {
     border: solid;
     border-width: 2px;
     border-color: #d9d9d9;
+}
+
+.fa-stack {
+    font-size: 1.79em;
+    margin: -10px;
+}
+
+.fa-info {
+    padding: 7px;
+    border: solid;
+    border-color: var(--grey);
+    border-radius: 50%;
 }
 
 #container1 {
@@ -100,7 +132,7 @@ form {
     width: 61%;
     background-color: var(--grey);
     border-radius: 15px;
-    padding: 2% 2.5%;
+    padding: 1.5% 2.5%;
 }
 
 #cards_container2 {
@@ -115,6 +147,7 @@ form {
     padding: 0.5% 0.5% 1.5% 0.5%;
     width: 28%;
     margin: 1.7% 0;
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
 }
 
 .card1_img {
@@ -126,67 +159,60 @@ form {
 }
 
 #container3 {
-    width: 29%;
+    width: 31%;
     background-color: var(--grey);
     border-radius: 15px;
-    padding: 1% 0%;
+    padding: 1.5% 0%;
 }
 
 #container3_title {
     display: flex;
     justify-content: space-between;
-    margin: 0 8%
+    margin: 0 8%;
 }
 
 #container3_title i {
     margin: auto 0;
+    font-size: 150%;
 }
 
 #cards_container3 {
+    width: 81%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin: 0 auto;
 }
 
 .card2 {
     background-color: white;
-    margin: 4% 8%;
-    padding: 0.5% 0.5% 1% 0.5%;
-    border-radius: 1.5em;
+    margin: 4% auto;
+    padding: 1%;
+    border-radius: 20px;
     display: flex;
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
 }
 
 .card2_img {
-    height: 135px;
+    height: 165px;
     width: 37%;
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     object-fit: cover;
 }
 
 .card2_text {
-    padding: 1%;
+    margin-top: 1.5%;
+    margin-left: 6%;
+    margin-right: 12%;
 }
 
-.blue {
-    color: var(--blue);
+.card2_text p{
+    margin-block-start: .5em;
+    margin-block-end: .5em;
 }
 
-.grey {
-    color: var(--grey);
-}
-
-.lightblue {
-    color: var(--lightblue);
-}
-
-#test {
-    height: 75%;
-    overflow: hidden;
-}
-
-#test img{
-    margin: 0px -500px -10px 0px;
+.card2_text i{
+    margin-top: 40px;
 }
 
 .price {
@@ -202,31 +228,79 @@ form {
     margin-bottom: 2%;
 }
 
-.fa-stack {
-    font-size: 1.5em;
-}
+
 
 #container5 {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 60px;
 }
 
 .card_full {
     width: 22.5%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
 }
 
 .card_full img {
     width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card_full p {
+    margin-left: 4%;
 }
 
 .cards_container4 {
     width: 22.5%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.cards_container4 img{
+.cards_container4 div {
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
+}
+
+.cards_container4 div p{
+    margin-left: 4%;
+}
+
+#small_img1 {
     width: 100%;
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+#small_img2 {
+    width: 100%;
+    height: 109px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+#small_img3 {
+    width: 100%;
+    height: 140px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+#small_img4 {
+    width: 100%;
+    height: 153px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
 }
 
 footer {
