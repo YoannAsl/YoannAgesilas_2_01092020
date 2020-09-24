@@ -21,7 +21,7 @@ body {
     margin: 0;
 }
 
-body p{
+body p {
     font-size: 110%;
 }
 
@@ -32,7 +32,7 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 25%;
     margin-right: 2%;
 }
@@ -44,8 +44,19 @@ nav a {
     font-size: 110%;
 }
 
+nav p {
+    padding: 5%;
+    font-size: 110%;
+    margin: 0;
+}
+
+.nav_mobile {
+    display: none;
+}
+
 #nav_selected {
     border-top: solid;
+    color: var(--blue);
 }
 
 form {
@@ -82,6 +93,9 @@ form {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     font-size: 110%;
+}
+#submit_button_mobile {
+    display: none;
 }
 
 #filters {
@@ -120,16 +134,21 @@ form {
     margin-right: 10px;
 }
 
+#info {
+    display: flex;
+}
+
 .fa-info {
     font-size: 85%;
-    padding: 5px 2px 0px 2px;
+    padding-top: 8px;
     text-align: center;
     border: solid;
     border-color: var(--grey);
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
+    height: 23px;
+    width: 30px;
     margin-right: 1%;
+    margin-top: 10px;
 }
 
 #container {
@@ -168,7 +187,7 @@ form {
 .card1 {
     background-color: white;
     border-radius: 20px;
-    padding: 0.5% 0.5% 1.5% 0.5%;
+    padding: 5px 5px 10px 5px;
     width: 28%;
     margin: 1.7% 0;
     box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
@@ -188,7 +207,7 @@ form {
     margin-left: 5%;
 }
 
-.card1_text p{
+.card1_text p {
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -223,7 +242,7 @@ form {
 .card2 {
     background-color: white;
     margin: 4% auto;
-    padding: 1%;
+    padding: 5px;
     border-radius: 20px;
     display: flex;
     box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
@@ -243,15 +262,16 @@ form {
     margin-top: 1.5%;
     margin-left: 6%;
     margin-right: 12%;
+    padding-bottom: 5%;
 }
 
-.card2_text p{
+.card2_text p {
     margin-block-start: .5em;
     margin-block-end: .5em;
 }
 
-.card2_text i{
-    margin-top: 40px;
+.card2_text i {
+    margin-top: 10px;
 }
 
 .price {
@@ -359,12 +379,104 @@ footer {
     width: 33%;
 }
 
-@media all and (max-device-width: 768px) {
+@media all and (max-width: 641px) {
     body p {
-        /* font-size: 100%; */
+        font-size: 100%;
+    }
+
+    #container {
+        width: 100%;
+    }
+
+    header {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 100%;
+        margin: 20px 0 20px 0;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    nav p {
+        justify-content: right;
+    }
+
+    .nav_mobile {
+        width: 100%;
+        display: flex;
+    }
+    
+    .nav_mobile div{
+        width: 50%;
+        padding-bottom: 10px;
+        text-align: center;
+        border-bottom: solid;
+        border-color: var(--grey);
+    }
+    
+    .nav_mobile a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    #nav_selected_mobile {
+        border-bottom: solid;
+        color: var(--blue);
+    }
+
+    #nav_selected_mobile a {
+        color: var(--blue);
+    }
+
+    #top_text {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    #top_text h2 {
+        font-size: 1.4em;
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #form_button {
+        height: 51px;
+        width: 16%;
+    }
+    
+    #form_input {
+        height: 47px;
+        width: 68%;
+    }
+    
+    #submit_button {
+        display: none;
+    }
+
+    #submit_button_mobile {
+        display: block;
+        height: 51px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        width: 16%;
+        border-radius: 25%;
+        font-size: 110%;
+        margin-left: -8px;
     }
 
     #filters {
+        width: 90%;
+        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
     }
@@ -375,6 +487,19 @@ footer {
 
     #filters .filter_switch {
         margin: 0 11px 13px 0;
+    }
+
+    #info {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .fa-info {
+        margin-right: 10px;
+        padding: 6px 3px 0px 3px;
+        height: 18px;
+        width: 23px;
+        border-width: 2px;
     }
 
     #container1 {
@@ -388,17 +513,261 @@ footer {
         padding: 0;
     }
 
+    #container2 h2 {
+        margin-left: 5%;
+    }
+
     #cards_container2 {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #container2_text {
+        margin-left: 5%;
+    }
+
+    .card1 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .card1_img {
+        width: 97%;
+        height: 114px;
+        margin: 5px 5px 0 5px;
+    }
+
+    .card1_text {
+        margin-bottom: 10px;
+    }
+    
+    #container3 {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #container3_title {
+        margin: 0 5%;
+    }
+
+    #cards_container3 {
+        width: 90%;
+    }
+
+    .card2_img {
+        height: 134px;
+        width: 37%;
+    }
+
+    .card2_text {
+        margin-top: 1.5%;
+        margin-left: 6%;
+        margin-right: 9%;
+        padding-bottom: 0;
+    }
+
+    .card2_text i {
+        margin-top: 20px;
+    }
+
+    #container4 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #container5 {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    .card1 {
+    .card_full {
         width: 100%;
+        margin: 1.7% 0;
+    }
+
+    .card_full img {
+        height: 134px;
+    }
+
+    .cards_container4 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cards_container4 a {
+        margin: 1.7% 0; 
+    }
+
+    #small_img1 {
+        height: 134px;
+    }
+
+    #small_img2 {
+        height: 134px;
+    }
+
+    #small_img3 {
+        height: 134px;
+    }
+
+    #small_img4 {
+        height: 134px;
+    }
+
+    #footer_container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #footer_container div {
+        width: 100%;
+        margin-left: 7.7%;
+    }
+}
+
+@media all and (min-width: 641px) and (max-width: 961px) {
+    #container {
+        width: 100%;
+    }
+
+    #container1 {
+        flex-direction: column-reverse;
+    }
+    
+    header {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 100%;
+        margin: 20px 0 20px 0;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    nav p {
+        justify-content: right;
+    }
+
+    .nav_mobile {
+        width: 100%;
+        display: flex;
+    }
+    
+    .nav_mobile div{
+        width: 50%;
+        padding-bottom: 10px;
+        text-align: center;
+        border-bottom: solid;
+        border-color: var(--grey);
+    }
+    
+    .nav_mobile a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        /* padding: 0 10% 5% 10%; */
+    }
+
+    #nav_selected_mobile {
+        border-bottom: solid;
+        color: var(--blue);
+    }
+
+    #nav_selected_mobile a{
+        color: var(--blue);
+    }
+    
+    #top_text {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #filters {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #filters .filter_switch {
+        margin: 0 11px 13px 11px;
+    }
+
+    #info {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #container2 {
+        width: 100%;
+        background-color: white;
+        padding: 0;
+    }
+
+    .card1 {
+        width: 43%
     }
 
     #container3 {
         width: 100%;
+        border-radius: 0;
+        padding: 20px 0 40px 0;
+    }
+
+    .card2 {
+        margin: 2% auto;
+    }
+
+    .card2_img {
+        height: 180px;
+    }
+
+    .card2_text {
+        font-size: 110%;
+    }
+
+    .card2_text i {
+        /* margin-top: 30px; */
+        position: relative;
+        bottom: 10px;
+    }
+
+    #container3_title {
+        margin: 0 5%;
+    }
+    
+    #cards_container3 {
+        width: 90%;
+    }
+
+    #container5 {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .card_full {
+        width: 47%;
+        margin-bottom: 5%;
+    }
+
+    .cards_container4 {
+        width: 47%;
+        margin-bottom: 5%;
     }
 }

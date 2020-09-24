@@ -12,21 +12,34 @@
 <body>
     <div id="container">
         <header>
-            <img src="images/logo/Reservia.svg"></img>
+            <img src="images/logo/Reservia.svg">
             <nav>
-                <a id="nav_selected" href="#container2" class="blue">Hébergements</a>
+                <a id="nav_selected" href="#container2">Hébergements</a>
                 <a href="#container4">Activités</a>
-                <a class="titre blue">S'inscrire</a>
+                <p class="titre blue">S'inscrire</p>
             </nav>
         </header>
 
-        <h2 class="titre">Trouvez votre hébergement pour des vacances de rève</h2>
-        <p>En plein centre ville ou en pleine nature</p>
+        <div class="nav_mobile">
+            <div id="nav_selected_mobile">
+                <a href="#container2">Hébergements</a>    
+            </div>
+            <div>
+                <a href="#container4">Activités</a>
+            </div>
+        </div>
+
+        <div id="top_text">
+            <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+            <p>En plein centre ville ou en pleine nature</p>
+        </div>
+
 
         <form>
             <button id="form_button" type="button"><i class="fas fa-map-marker-alt"></i></button>
             <input id="form_input" type="text" value="Marseille, France">
             <button id="submit_button" type="submit">Rechercher</button>    
+            <button id="submit_button_mobile" type="submit"><i class="fas fa-search"></i></button>    
         </form>
 
         <div id="filters">
@@ -69,11 +82,14 @@
             </button>
         </div>
         
-        <p><i class="fas fa-info blue"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+        <div id="info">
+            <i class="fas fa-info blue"></i>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>
 
         <div id="container1">
             <div id="container2">
-                <h2 class="titre">Hébergements à Marseille</h2>
+                <h2>Hébergements à Marseille</h2>
                 <div id="cards_container2">
                     <a class="card1" href="#">
                         <img class="card1_img" src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg">                            
@@ -153,7 +169,7 @@
 
             <div id="container3">
                 <div id="container3_title">
-                    <h2 class="titre">Les plus populaires</h2>
+                    <h2>Les plus populaires</h2>
                     <i class="fas fa-chart-line"></i>
                 </div>
                 <div id="cards_container3">
@@ -198,7 +214,7 @@
         </div>
         
         <div id="container4">
-            <h2 class="titre">Activités à Marseille</h2>
+            <h2>Activités à Marseille</h2>
             <div id="container5">
                 <a class="card_full" href="#">
                     <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
@@ -235,18 +251,18 @@
     <footer>
         <div id="footer_container">
             <div>
-                <p class="titre">A propos</p>
+                <h3>A propos</h3>
                 <p>Fonctionnement du site</p>
                 <p>Conditions générales de vente</p>
                 <p>Données et confidentialité</p>
             </div>
             <div>
-                <p class="titre">Nos hébergements</p>
+                <h3>Nos hébergements</h3>
                 <p>Charte qualité</p>
                 <p>Soumettre votre hôtel</p>
             </div>
             <div>
-                <p class="titre">Assistance</p>
+                <h3>Assistance</h3>
                 <p>Centre d'aide</p>
                 <p>Nous contacter</p>
             </div>    
