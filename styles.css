@@ -46,7 +46,6 @@ nav a {
 
 nav p {
     padding: 5%;
-    font-size: 110%;
     margin: 0;
 }
 
@@ -112,7 +111,7 @@ form {
     display: flex;
 }
 
-.titre {
+.bold {
     font-weight: bold;
 }
 
@@ -287,10 +286,6 @@ form {
 .card2_stars { 
     position: absolute;
     bottom: 14px;
-}
-
-.price {
-    font-weight: bold;
 }
 
 #container4 {
